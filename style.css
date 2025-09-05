@@ -402,4 +402,10 @@ address a:hover {
     .foto-galeria {
         max-width: 100%;
     }
+    
 }
+
+.imagemGaleria{
+        max-width: 600px;
+        max-height: 750px;
+    }
