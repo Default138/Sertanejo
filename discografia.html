@@ -4,10 +4,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discografia</title>
+    <title>Discografia - Luan & Mateus</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-
+        .discografia-page {
+            padding: 2rem 0;
+        }
+        
+        .album-container {
+            display: grid;
+            /* cria colunas que se repetem e preenchem o espaco q faltar, mínimo 300px e máximo 1 fração do espaço disponível*/
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            /*tamanho das tais colunas vazias*/
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .album-card {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .album-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .album-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .album-info {
+            padding: 1.5rem;
+        }
+        
+        .album-title {
+            font-size: 1.5rem;
+            color: #e67e22;
+            margin-bottom: 0.5rem;
+        }
+        
+        .album-year {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .album-tracks {
+            margin: 1rem 0;
+        }
+        
+        .track-item {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .track-item:last-child {
+            border-bottom: none;
+        }
+        
+        .streaming-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .streaming-links a {
+            color: #555;
+            transition: color 0.3s ease;
+        }
+        
+        .streaming-links a:hover {
+            color: #e67e22;
+        }
+        
+        .discografia-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .discografia-header p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .album-container {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -15,15 +110,13 @@
     <header>
         <!-- Banner e logo -->
         <img src="FotosSert\banner.png" class="banner" id="banner" alt="Banner da dupla sertaneja">
-        <img src="FotosSert\logo.png" class="logo" id="logo" alt="Logo da dupla sertaneja">
 
-        <!-- Titu e chamada p acao -->
+        <!-- Título e chamada para ação -->
         <div class="header-content">
             <h1>A Mais Nova Dupla Sertaneja do Momento</h1>
             <p class="cta">Os Mais Ouvidos no Spotify </p>
             <img src="FotosSert\dupla.jpg" id="imagem-header" alt="Foto da dupla">
         </div>
-
 
         <!-- Menu -->
         <nav aria-label="Navegação principal">
@@ -37,9 +130,206 @@
             </ul>
         </nav>
     </header>
-    <main>
-
+    
+    <main class="discografia-page">
+        <section aria-labelledby="discografia-heading">
+            <h2 id="discografia-heading">Nossa Discografia Completa</h2>
+            
+            <div class="discografia-header">
+                <p>Conheça todos os álbuns e singles que marcaram a trajetória da dupla. De sucessos consagrados às novidades que estão conquistando o Brasil.</p>
+            </div>
+            
+            <div class="album-container">
+                <!-- Álbum 1 -->
+                <article class="album-card">
+                    <img src="FotosSert\album.png" alt="Álbum Girassóis" class="album-image">
+                    <div class="album-info">
+                        <h3 class="album-title">Girassóis</h3>
+                        <p class="album-year">2023 • Álbum</p>
+                        <div class="album-tracks">
+                            <div class="track-item">
+                                <span>1. Estrada de Volta</span>
+                                <span>3:45</span>
+                            </div>
+                            <div class="track-item">
+                                <span>2. Morena</span>
+                                <span>3:12</span>
+                            </div>
+                            <div class="track-item">
+                                <span>3. Girassóis</span>
+                                <span>4:02</span>
+                            </div>
+                            <div class="track-item">
+                                <span>4. Vai Ser Amor</span>
+                                <span>3:28</span>
+                            </div>
+                            <div class="track-item">
+                                <span>5. + 1 Pra Road</span>
+                                <span>3:15</span>
+                            </div>
+                        </div>
+                        <div class="streaming-links">
+                            <a href="#" aria-label="Ouvir no Spotify"><i class="bi bi-spotify"></i></a>
+                            <a href="#" aria-label="Ouvir no YouTube"><i class="bi bi-youtube"></i></a>
+                            <a href="#" aria-label="Ouvir no Apple Music"><i class="bi bi-music-note-beamed"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Álbum 2 -->
+                <article class="album-card">
+                    <img src="https://via.placeholder.com/300x300/f5f5f5/cccccc?text=Álbum+2" alt="Álbum Ao Vivo em Goiânia" class="album-image">
+                    <div class="album-info">
+                        <h3 class="album-title">Ao Vivo em Goiânia</h3>
+                        <p class="album-year">2022 • Álbum Ao Vivo</p>
+                        <div class="album-tracks">
+                            <div class="track-item">
+                                <span>1. Estrada de Volta (Ao Vivo)</span>
+                                <span>4:01</span>
+                            </div>
+                            <div class="track-item">
+                                <span>2. Morena (Ao Vivo)</span>
+                                <span>3:35</span>
+                            </div>
+                            <div class="track-item">
+                                <span>3. Vai Ser Amor (Ao Vivo)</span>
+                                <span>3:45</span>
+                            </div>
+                            <div class="track-item">
+                                <span>4. Dona do Meu Coração</span>
+                                <span>3:20</span>
+                            </div>
+                            <div class="track-item">
+                                <span>5. Só Pensando em Você</span>
+                                <span>3:10</span>
+                            </div>
+                        </div>
+                        <div class="streaming-links">
+                            <a href="#" aria-label="Ouvir no Spotify"><i class="bi bi-spotify"></i></a>
+                            <a href="#" aria-label="Ouvir no YouTube"><i class="bi bi-youtube"></i></a>
+                            <a href="#" aria-label="Ouvir no Apple Music"><i class="bi bi-music-note-beamed"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Álbum 3 -->
+                <article class="album-card">
+                    <img src="https://via.placeholder.com/300x300/f5f5f5/cccccc?text=Álbum+3" alt="Primeiras Histórias" class="album-image">
+                    <div class="album-info">
+                        <h3 class="album-title">Primeiras Histórias</h3>
+                        <p class="album-year">2021 • Álbum</p>
+                        <div class="album-tracks">
+                            <div class="track-item">
+                                <span>1. Nosso Primeiro Encontro</span>
+                                <span>3:55</span>
+                            </div>
+                            <div class="track-item">
+                                <span>2. Cidade Pequena</span>
+                                <span>3:40</span>
+                            </div>
+                            <div class="track-item">
+                                <span>3. Viola e Voz</span>
+                                <span>4:15</span>
+                            </div>
+                            <div class="track-item">
+                                <span>4. Destino</span>
+                                <span>3:25</span>
+                            </div>
+                            <div class="track-item">
+                                <span>5. Raízes</span>
+                                <span>3:50</span>
+                            </div>
+                        </div>
+                        <div class="streaming-links">
+                            <a href="#" aria-label="Ouvir no Spotify"><i class="bi bi-spotify"></i></a>
+                            <a href="#" aria-label="Ouvir no YouTube"><i class="bi bi-youtube"></i></a>
+                            <a href="#" aria-label="Ouvir no Apple Music"><i class="bi bi-music-note-beamed"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Álbum 4 -->
+                <article class="album-card">
+                    <img src="https://via.placeholder.com/300x300/f5f5f5/cccccc?text=Álbum+4" alt="Sertanejo de Raiz" class="album-image">
+                    <div class="album-info">
+                        <h3 class="album-title">Sertanejo de Raiz</h3>
+                        <p class="album-year">2020 • EP</p>
+                        <div class="album-tracks">
+                            <div class="track-item">
+                                <span>1. Modão de Viola</span>
+                                <span>4:20</span>
+                            </div>
+                            <div class="track-item">
+                                <span>2. Saudade da Roça</span>
+                                <span>3:45</span>
+                            </div>
+                            <div class="track-item">
+                                <span>3. Amor de Interior</span>
+                                <span>3:30</span>
+                            </div>
+                            <div class="track-item">
+                                <span>4. Caminho de Boiadeiro</span>
+                                <span>4:05</span>
+                            </div>
+                        </div>
+                        <div class="streaming-links">
+                            <a href="#" aria-label="Ouvir no Spotify"><i class="bi bi-spotify"></i></a>
+                            <a href="#" aria-label="Ouvir no YouTube"><i class="bi bi-youtube"></i></a>
+                            <a href="#" aria-label="Ouvir no Apple Music"><i class="bi bi-music-note-beamed"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <!-- Singles Section -->
+        <section aria-labelledby="singles-heading">
+            <h2 id="singles-heading">Singles</h2>
+            
+            <div class="album-container">
+                <!-- Single 1 -->
+                <article class="album-card">
+                    <img src="https://via.placeholder.com/300x300/f5f5f5/cccccc?text=Single+1" alt="Single Mais Um Dia" class="album-image">
+                    <div class="album-info">
+                        <h3 class="album-title">Mais Um Dia</h3>
+                        <p class="album-year">2023 • Single</p>
+                        <div class="album-tracks">
+                            <div class="track-item">
+                                <span>1. Mais Um Dia</span>
+                                <span>3:40</span>
+                            </div>
+                        </div>
+                        <div class="streaming-links">
+                            <a href="#" aria-label="Ouvir no Spotify"><i class="bi bi-spotify"></i></a>
+                            <a href="#" aria-label="Ouvir no YouTube"><i class="bi bi-youtube"></i></a>
+                            <a href="#" aria-label="Ouvir no Apple Music"><i class="bi bi-music-note-beamed"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Single 2 -->
+                <article class="album-card">
+                    <img src="https://via.placeholder.com/300x300/f5f5f5/cccccc?text=Single+2" alt="Single No Seu Coração" class="album-image">
+                    <div class="album-info">
+                        <h3 class="album-title">No Seu Coração</h3>
+                        <p class="album-year">2022 • Single</p>
+                        <div class="album-tracks">
+                            <div class="track-item">
+                                <span>1. No Seu Coração</span>
+                                <span>3:25</span>
+                            </div>
+                        </div>
+                        <div class="streaming-links">
+                            <a href="#" aria-label="Ouvir no Spotify"><i class="bi bi-spotify"></i></a>
+                            <a href="#" aria-label="Ouvir no YouTube"><i class="bi bi-youtube"></i></a>
+                            <a href="#" aria-label="Ouvir no Apple Music"><i class="bi bi-music-note-beamed"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
+    
     <footer class="rodape">
         <div class="container">
             <div class="rodape-coluna">
@@ -71,8 +361,10 @@
             </div>
         </div>
     </footer>
+    
     <script>
-
+        // Adiciona o ano atual no footer
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 

@@ -1,7 +1,7 @@
 /* Reset and Base Styles */
 * {
-    margin: 5;
-    padding: 5;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -37,14 +37,6 @@ header {
     object-position: center;
 }
 
-.logo {
-    position: absolute;
-    top: 415px;
-    left: 20px;
-    max-width: 120px;
-    z-index: 10;
-}
-
 .header-content {
     position: absolute;
     top: 50%;
@@ -53,6 +45,10 @@ header {
     color: white;
     text-shadow: 2px 2px 4px rgba(255, 227, 100, 0.616);
     width: 80%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
 
 .header-content h1 {
@@ -67,18 +63,20 @@ header {
 }
 
 #imagem-header {
-    border-radius: 50%;
     border: 5px solid white;
     width: 150px;
     height: 150px;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 10px;
 }
 
 /* Navigation */
 nav {
     background-color: #1a1a1a;
     padding: 1rem 0;
+    border: 10px;
 }
 
 nav ul {
@@ -104,7 +102,7 @@ nav a:hover {
     color: white;
 }
 
-/* Main Content Sections */
+/* Main */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -136,7 +134,7 @@ h2::after {
     margin: 0.5rem auto;
 }
 
-/* About Section */
+/* Sobre */
 #sobre-container {
     text-align: center;
 }
@@ -155,7 +153,7 @@ h2::after {
     text-decoration: underline;
 }
 
-/* Discography Section */
+/* Discografia */
 #discografia-container {
     text-align: center;
 }
@@ -201,7 +199,7 @@ h2::after {
     background-color: #d35400;
 }
 
-/* Schedule Section */
+/* Agenda */
 .evento {
     text-align: center;
     max-width: 800px;
@@ -251,7 +249,7 @@ h2::after {
     color: white;
 }
 
-/* Gallery Section */
+/* Galeria */
 .gallery-grid {
     margin-top: 2rem;
 }
@@ -263,6 +261,11 @@ h2::after {
     gap: 1.5rem;
     margin-bottom: 1.5rem;
 }
+
+.imagemGaleria{
+        width: 400px;
+        height: 300px;
+    }
 
 .foto-galeria {
     flex: 1;
@@ -291,7 +294,7 @@ h2::after {
     font-weight: 500;
 }
 
-/* Footer Styles */
+/* Footer */
 .rodape {
     background-color: #1a1a1a;
     color: white;
@@ -375,7 +378,7 @@ address a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design */
+/* Responsividade */
 @media (max-width: 768px) {
     .header-content h1 {
         font-size: 1.8rem;
@@ -405,7 +408,3 @@ address a:hover {
     
 }
 
-.imagemGaleria{
-        width: 400px;
-        height: 300px;
-    }

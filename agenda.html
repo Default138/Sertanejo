@@ -4,10 +4,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda</title>
+    <title>Agenda - Luan & Mateus</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-
+        /* Estilos específicos para a página de agenda */
+        .agenda-page {
+            padding: 2rem 0;
+        }
+        
+        .agenda-intro {
+            text-align: center;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .evento {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .evento-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .evento-data {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #e67e22;
+        }
+        
+        .evento-local {
+            font-size: 1.1rem;
+            color: #555;
+        }
+        
+        .evento-detalhes {
+            margin-bottom: 1rem;
+        }
+        
+        .evento-detalhes p {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .evento-detalhes i {
+            margin-right: 0.5rem;
+            color: #e67e22;
+        }
+        
+        .evento-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .sem-eventos {
+            text-align: center;
+            padding: 2rem;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .mes-separador {
+            text-align: center;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e67e22;
+            color: #e67e22;
+            font-size: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .evento-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .evento-actions {
+                flex-direction: column;
+            }
+            
+            .btn-ingresso, .link-agenda {
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
@@ -15,9 +109,8 @@
     <header>
         <!-- Banner e logo -->
         <img src="FotosSert\banner.png" class="banner" id="banner" alt="Banner da dupla sertaneja">
-        <img src="FotosSert\logo.png" class="logo" id="logo" alt="Logo da dupla sertaneja">
 
-        <!-- Titu e chamada p acao -->
+        <!-- Título e chamada para ação -->
         <div class="header-content">
             <h1>A Mais Nova Dupla Sertaneja do Momento</h1>
             <p class="cta">Os Mais Ouvidos no Spotify </p>
@@ -36,51 +129,184 @@
             </ul>
         </nav>
     </header>
-    <main>
-
-        <!--Conteudo da agenda-->
-<section id="agenda-container" aria-labelledby="agenda-heading">
-            <h2 id="agenda-heading">Nossos próximos shows!</h2>
+    
+    <main class="agenda-page">
+        <section aria-labelledby="agenda-heading">
+            <h2 id="agenda-heading">Nossa Agenda</h2>
+            
+            <div class="agenda-intro">
+                <p>Confira onde a dupla vai se apresentar e garanta seu ingresso para os próximos shows. Não perca a chance de ver Luan & Mateus ao vivo!</p>
+            </div>
+            
+            <!-- Novembro 2023 -->
+            <h3 class="mes-separador">Novembro 2023</h3>
+            
             <article class="evento">
-                <p><i class="bi bi-calendar-date"></i> 26/11</p>
-                <p><i class="bi bi-clock"></i> 19:00</p>
-                <p><i class="bi bi-geo-alt"></i> <a href="https://maps.app.goo.gl/H7vgfcSCndFXLJSL7">Goiânia - GO</a></p>
-
+                <div class="evento-header">
+                    <div class="evento-data">26/11/2023</div>
+                    <div class="evento-local">Goiânia, GO</div>
+                </div>
+                
+                <div class="evento-detalhes">
+                    <p><i class="bi bi-clock"></i> 19:00</p>
+                    <p><i class="bi bi-geo-alt"></i> <a href="https://maps.app.goo.gl/H7vgfcSCndFXLJSL7">Arena Goiânia</a></p>
+                    <p><i class="bi bi-info-circle"></i> Show especial com participações surpresa</p>
+                </div>
+                
                 <div class="evento-actions">
                     <a href="checkout.html" class="btn-ingresso">Compre seu ingresso!</a>
+                    <a href="https://maps.app.goo.gl/H7vgfcSCndFXLJSL7" class="link-agenda" target="_blank">Como chegar</a>
                 </div>
             </article>
-             <article class="evento">
-                <p><i class="bi bi-calendar-date"></i> 30/11</p>
-                <p><i class="bi bi-clock"></i> 20:30</p>
-                <p><i class="bi bi-geo-alt"></i> <a href="https://maps.app.goo.gl/k7viyB7EecYYGwPEA">Foz do Iguaçu - PR</a></p>
-
+            
+            <!-- Dezembro 2023 -->
+            <h3 class="mes-separador">Dezembro 2023</h3>
+            
+            <article class="evento">
+                <div class="evento-header">
+                    <div class="evento-data">05/12/2023</div>
+                    <div class="evento-local">São Paulo, SP</div>
+                </div>
+                
+                <div class="evento-detalhes">
+                    <p><i class="bi bi-clock"></i> 21:00</p>
+                    <p><i class="bi bi-geo-alt"></i> <a href="#">Espaço das Américas</a></p>
+                    <p><i class="bi bi-info-circle"></i> Evento beneficente</p>
+                </div>
+                
                 <div class="evento-actions">
                     <a href="checkout.html" class="btn-ingresso">Compre seu ingresso!</a>
+                    <a href="#" class="link-agenda">Mais informações</a>
                 </div>
             </article>
-             <article class="evento">
-                <p><i class="bi bi-calendar-date"></i> 09/12</p>
-                <p><i class="bi bi-clock"></i> 21:00</p>
-                <p><i class="bi bi-geo-alt"></i> <a href="https://maps.app.goo.gl/5XB19Fg2PRKqas1p7">Xixique - BH</a></p>
-
+            
+            <article class="evento">
+                <div class="evento-header">
+                    <div class="evento-data">15/12/2023</div>
+                    <div class="evento-local">Belo Horizonte, MG</div>
+                </div>
+                
+                <div class="evento-detalhes">
+                    <p><i class="bi bi-clock"></i> 20:00</p>
+                    <p><i class="bi bi-geo-alt"></i> <a href="#">Mineirão</a></p>
+                    <p><i class="bi bi-info-circle"></i> Show de encerramento do ano</p>
+                </div>
+                
                 <div class="evento-actions">
                     <a href="checkout.html" class="btn-ingresso">Compre seu ingresso!</a>
+                    <a href="#" class="link-agenda">Mais informações</a>
                 </div>
             </article>
-             <article class="evento">
-                <p><i class="bi bi-calendar-date"></i> 25/12</p>
-                <p><i class="bi bi-clock"></i> 23:00</p>
-                <p><i class="bi bi-geo-alt"></i> <a href="https://maps.app.goo.gl/uB14mB5ZqTWemibq9">Capão - SP</a></p>
-
+            
+            <article class="evento">
+                <div class="evento-header">
+                    <div class="evento-data">31/12/2023</div>
+                    <div class="evento-local">Rio de Janeiro, RJ</div>
+                </div>
+                
+                <div class="evento-detalhes">
+                    <p><i class="bi bi-clock"></i> 23:30</p>
+                    <p><i class="bi bi-geo-alt"></i> <a href="#">Copacabana</a></p>
+                    <p><i class="bi bi-info-circle"></i> Réveillon - Show gratuito</p>
+                </div>
+                
+                <div class="evento-actions">
+                    <a href="#" class="link-agenda">Mais informações</a>
+                </div>
+            </article>
+            
+            <!-- Janeiro 2024 -->
+            <h3 class="mes-separador">Janeiro 2024</h3>
+            
+            <article class="evento">
+                <div class="evento-header">
+                    <div class="evento-data">15/01/2024</div>
+                    <div class="evento-local">Salvador, BA</div>
+                </div>
+                
+                <div class="evento-detalhes">
+                    <p><i class="bi bi-clock"></i> 19:30</p>
+                    <p><i class="bi bi-geo-alt"></i> <a href="#">Arena Fonte Nova</a></p>
+                    <p><i class="bi bi-info-circle"></i> Festival de Verão</p>
+                </div>
+                
                 <div class="evento-actions">
                     <a href="checkout.html" class="btn-ingresso">Compre seu ingresso!</a>
+                    <a href="#" class="link-agenda">Mais informações</a>
                 </div>
             </article>
+            
+            <article class="evento">
+                <div class="evento-header">
+                    <div class="evento-data">27/01/2024</div>
+                    <div class="evento-local">Florianópolis, SC</div>
+                </div>
+                
+                <div class="evento-detalhes">
+                    <p><i class="bi bi-clock"></i> 20:00</p>
+                    <p><i class="bi bi-geo-alt"></i> <a href="#">Centro de Eventos</a></p>
+                    <p><i class="bi bi-info-circle"></i> Show especial</p>
+                </div>
+                
+                <div class="evento-actions">
+                    <a href="checkout.html" class="btn-ingresso">Compre seu ingresso!</a>
+                    <a href="#" class="link-agenda">Mais informações</a>
+                </div>
+            </article>
+            
+            <!-- Fevereiro 2024 -->
+            <h3 class="mes-separador">Fevereiro 2024</h3>
+            
+            <article class="evento">
+                <div class="evento-header">
+                    <div class="evento-data">10/02/2024</div>
+                    <div class="evento-local">Fortaleza, CE</div>
+                </div>
+                
+                <div class="evento-detalhes">
+                    <p><i class="bi bi-clock"></i> 18:00</p>
+                    <p><i class="bi bi-geo-alt"></i> <a href="#">Beira Mar</a></p>
+                    <p><i class="bi bi-info-circle"></i> Show gratuito</p>
+                </div>
+                
+                <div class="evento-actions">
+                    <a href="#" class="link-agenda">Mais informações</a>
+                </div>
+            </article>
+            
+            <!-- Eventos passados (collapse) -->
+            <details>
+                <summary class="mes-separador">Eventos Passados</summary>
+                
+                <article class="evento">
+                    <div class="evento-header">
+                        <div class="evento-data">15/10/2023</div>
+                        <div class="evento-local">Brasília, DF</div>
+                    </div>
+                    
+                    <div class="evento-detalhes">
+                        <p><i class="bi bi-clock"></i> 20:00</p>
+                        <p><i class="bi bi-geo-alt"></i> <a href="#">Estádio Mané Garrincha</a></p>
+                        <p><i class="bi bi-info-circle"></i> Show esgotado</p>
+                    </div>
+                </article>
+                
+                <article class="evento">
+                    <div class="evento-header">
+                        <div class="evento-data">30/09/2023</div>
+                        <div class="evento-local">Curitiba, PR</div>
+                    </div>
+                    
+                    <div class="evento-detalhes">
+                        <p><i class="bi bi-clock"></i> 19:30</p>
+                        <p><i class="bi bi-geo-alt"></i> <a href="#">Arena da Baixada</a></p>
+                        <p><i class="bi bi-info-circle"></i> Noite de autógrafos após o show</p>
+                    </div>
+                </article>
+            </details>
         </section>
-        <!--Até aqui-->
-
     </main>
+    
     <footer class="rodape">
         <div class="container">
             <div class="rodape-coluna">
@@ -112,7 +338,11 @@
             </div>
         </div>
     </footer>
-
+    
+    <script>
+        // Adiciona o ano atual no footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
